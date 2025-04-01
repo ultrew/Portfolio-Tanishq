@@ -23,20 +23,25 @@
             color: #c9d1d9;
             line-height: 1.6;
             scroll-behavior: smooth;
+            text-align: center;
         }
 
         .container {
-            align-items: center;
             width: 85%;
             max-width: 1200px;
-            margin: auto;
+            margin: 0 auto;
             padding: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         h1, h2, h3 {
             color: var(--cyber-teal);
             position: relative;
             margin-bottom: 2rem;
+            text-align: center;
+            width: 100%;
         }
 
         h1::after, h2::after {
@@ -56,6 +61,8 @@
             border-bottom: 2px solid rgba(45, 226, 230, 0.1);
             position: relative;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
         }
 
         header::before {
@@ -81,6 +88,7 @@
             justify-content: center;
             gap: 2rem;
             flex-wrap: wrap;
+            width: 100%;
         }
 
         nav ul li a {
@@ -90,6 +98,7 @@
             position: relative;
             padding: 0.5rem 1rem;
             transition: all 0.3s ease;
+            text-align: center;
         }
 
         nav ul li a::before {
@@ -116,6 +125,9 @@
             transform: translateY(20px);
             opacity: 0;
             animation: fadeUp 0.6s ease forwards;
+            width: 100%;
+            display: flex;
+            justify-content: center;
         }
 
         @keyframes fadeUp {
@@ -130,6 +142,8 @@
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 1.5rem;
             margin-top: 2rem;
+            width: 100%;
+            justify-items: center;
         }
 
         .skill-item {
@@ -138,6 +152,8 @@
             border-radius: 8px;
             border: 1px solid var(--cyber-teal);
             transition: transform 0.3s ease;
+            text-align: center;
+            width: 150px;
         }
 
         .skill-item:hover {
@@ -150,6 +166,7 @@
             justify-content: center;
             flex-wrap: wrap;
             margin-top: 2rem;
+            width: 100%;
         }
 
         .contact-link {
@@ -179,6 +196,7 @@
             padding: 2rem 0;
             text-align: center;
             border-top: 1px solid rgba(45, 226, 230, 0.1);
+            width: 100%;
         }
 
         @media (max-width: 768px) {
@@ -189,6 +207,11 @@
             nav ul {
                 gap: 1rem;
             }
+            
+            .skill-item {
+                width: 100%;
+                max-width: 200px;
+            }
         }
     </style>
 </head>
@@ -196,7 +219,7 @@
     <header>
         <div class="container">
             <h1>Tanishq Nama</h1>
-            <p style="color: #8b949e; font-size: 1.1rem; margin-bottom: 1.5rem;">Cybersecurity Enthusiast | Certified Ethical Hacker (CEH v13) | Content Creator</p>
+            <p style="color: #8b949e; font-size: 1.1rem; margin-bottom: 1.5rem; text-align: center;">Cybersecurity Enthusiast | Certified Ethical Hacker (CEH v13) | Content Creator</p>
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
@@ -211,7 +234,7 @@
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
-            <p style="max-width: 600px; margin: 0 auto;">I'm Tanishq Nama, a passionate cybersecurity enthusiast dedicated to ethical hacking and digital defense.</p>
+            <p style="max-width: 600px; margin: 0 auto; text-align: center;">I'm Tanishq Nama, a passionate cybersecurity enthusiast dedicated to ethical hacking and digital defense.</p>
         </div>
     </section>
 
@@ -233,12 +256,12 @@
             <h2>Projects</h2>
             <div class="skills-grid">
                 <div class="skill-item" style="min-height: 120px;">
-                    <h3 style="margin: 0 0 0.5rem;">Project 1</h3>
-                    <p style="font-size: 0.9rem; color: #8b949e;">Details coming soon</p>
+                    <h3 style="margin: 0 0 0.5rem; text-align: center;">Project 1</h3>
+                    <p style="font-size: 0.9rem; color: #8b949e; text-align: center;">Details coming soon</p>
                 </div>
                 <div class="skill-item" style="min-height: 120px;">
-                    <h3 style="margin: 0 0 0.5rem;">Project 2</h3>
-                    <p style="font-size: 0.9rem; color: #8b949e;">More to be added</p>
+                    <h3 style="margin: 0 0 0.5rem; text-align: center;">Project 2</h3>
+                    <p style="font-size: 0.9rem; color: #8b949e; text-align: center;">More to be added</p>
                 </div>
             </div>
         </div>
@@ -262,7 +285,7 @@
 
     <footer>
         <div class="container">
-            <p style="margin: 0; color: #8b949e;">&copy; 2025 Tanishq Nama. All rights reserved.</p>
+            <p style="margin: 0; color: #8b949e; text-align: center;">&copy; 2025 Tanishq Nama. All rights reserved.</p>
         </div>
     </footer>
 </body>
