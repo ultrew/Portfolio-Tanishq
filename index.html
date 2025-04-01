@@ -1,9 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- All meta tags and external links remain unchanged -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanishq Nama | Cybersecurity Enthusiast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Added responsive improvements below existing code */
+        :root {
+            --cyber-teal: #2de2e6;
+            --cyber-purple: #c724b1;
+            --dark-bg: #0d1117;
+            --section-bg: #161b22;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: var(--dark-bg);
+            color: #c9d1d9;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            text-align: center;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1, h2, h3 {
+            color: var(--cyber-teal);
+            position: relative;
+            margin-bottom: 2rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        h1::after, h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--cyber-teal), var(--cyber-purple));
+        }
+
+        header {
+            background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
+            padding: 2rem 0;
+            border-bottom: 2px solid rgba(45, 226, 230, 0.1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(45, 226, 230, 0.1), transparent);
+            animation: cyberGlow 4s infinite;
+        }
+
+        @keyframes cyberGlow {
+            100% { left: 200%; }
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        nav ul li a {
+            color: var(--cyber-teal);
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        nav ul li a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--cyber-purple);
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::before {
+            width: 100%;
+        }
+
+        section {
+            padding: 4rem 0;
+            background: var(--section-bg);
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeUp 0.6s ease forwards;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        @keyframes fadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 800px;
+            justify-content: center;
+        }
+
+        .skill-item {
+            background: rgba(45, 226, 230, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--cyber-teal);
+            transition: all 0.3s ease;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            min-height: 120px;
+        }
+
+        .skill-item i {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--cyber-teal);
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            width: 100%;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(135deg, var(--cyber-teal), var(--cyber-purple));
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .contact-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(45, 226, 230, 0.3);
+        }
+
+        .contact-link i {
+            font-size: 1.2rem;
+        }
+
+        footer {
+            background: #161b22;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(45, 226, 230, 0.1);
+            width: 100%;
+        }
+
         @media (max-width: 768px) {
             .container {
                 width: 90%;
@@ -37,6 +236,7 @@
                 padding: 1rem;
                 width: 100%;
                 max-width: 160px;
+                min-height: 110px;
             }
 
             .contact-links {
@@ -71,10 +271,12 @@
     </style>
 </head>
 <body>
-     <header>
+    <header>
         <div class="container">
             <h1>Tanishq Nama</h1>
-            <p style="color: #8b949e; font-size: 1.1rem; margin-bottom: 1.5rem; text-align: center;">Cybersecurity Enthusiast | Certified Ethical Hacker (CEH v13) | Content Creator</p>
+            <p style="color: #8b949e; font-size: 1.1rem; margin-bottom: 1.5rem; text-align: center;">
+                Cybersecurity Enthusiast | Certified Ethical Hacker (CEH v13) | Content Creator
+            </p>
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
@@ -89,7 +291,9 @@
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
-            <p style="max-width: 600px; margin: 0 auto; text-align: center;">I'm Tanishq Nama, a passionate cybersecurity enthusiast dedicated to ethical hacking and digital defense. With a strong curiosity for cybersecurity, I explore vulnerabilities, secure systems, and dive deep into ethical hacking. Beyond tech, I love psychology, spirituality, and anime.</p>
+            <p style="max-width: 600px; margin: 0 auto; text-align: center;">
+                I'm Tanishq Nama, a passionate cybersecurity enthusiast dedicated to ethical hacking and digital defense. With a strong curiosity for cybersecurity, I explore vulnerabilities, secure systems, and dive deep into ethical hacking. Beyond tech, I love psychology, spirituality, and anime.
+            </p>
         </div>
     </section>
 
@@ -97,11 +301,26 @@
         <div class="container">
             <h2>Skills</h2>
             <div class="skills-grid">
-                <div class="skill-item">Linux <i class="fas fa-terminal"></i></div>
-                <div class="skill-item">Bash <i class="fas fa-code"></i></div>
-                <div class="skill-item">Networking <i class="fas fa-network-wired"></i></div>
-                <div class="skill-item">Cybersecurity <i class="fas fa-shield-alt"></i></div>
-                <div class="skill-item">Ethical Hacking <i class="fas fa-user-secret"></i></div>
+                <div class="skill-item">
+                    <i class="fas fa-terminal"></i>
+                    Linux
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-code"></i>
+                    Bash
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-network-wired"></i>
+                    Networking
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-shield-alt"></i>
+                    Cybersecurity
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-user-secret"></i>
+                    Ethical Hacking
+                </div>
             </div>
         </div>
     </section>
@@ -140,7 +359,9 @@
 
     <footer>
         <div class="container">
-            <p style="margin: 0; color: #8b949e; text-align: center;">&copy; 2025 Tanishq Nama. All rights reserved.</p>
+            <p style="margin: 0; color: #8b949e; text-align: center;">
+                &copy; 2025 Tanishq Nama. All rights reserved.
+            </p>
         </div>
     </footer>
 </body>
